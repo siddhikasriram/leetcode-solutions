@@ -3,12 +3,11 @@
 
 class Solution(object):
     def twoSum(self, nums, target):
-        hashmap = {}
-        for i, num in enumerate(nums): 
-            complement = target - num 
+        d = {}
+        for ind, n in enumerate(nums):
+            ans = target-n
+            if ans in d:
+                return [d[ans], ind]
+            else:
+                d[n] = ind
 
-            if complement in hashmap: 
-                return [hashmap[complement], i]
-
-            hashmap[num] = i
-        
