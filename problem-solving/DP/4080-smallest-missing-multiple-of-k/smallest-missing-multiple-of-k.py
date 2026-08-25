@@ -6,7 +6,7 @@ class Solution(object):
         :rtype: int
         """
         pm =k
-        set(nums)
+        nums = set(nums)
         for i in range (0, len(nums)):
             if pm not in nums:
                 return pm
